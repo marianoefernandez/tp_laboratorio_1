@@ -1,3 +1,5 @@
+#include "funciones.h"
+
 float sumar(float x, float y) {
   return x+y;
 }
