@@ -4,84 +4,79 @@
 
 void main (void)
 {
-  int calculadora;
+    int calculadora;
 
-  int flag = 0;
-  float a, b;
-  char c;
+    int flag = 0;
+    float a, b;
+    char c;
 
-  printf ("\nIntroduce una opcion:\n");
-  printf ("1.- Ingresar primer operador\n");
-  printf ("2.- Ingresar segundo operador\n");
-  printf ("3.- Calcular las operaciones\n");
-  printf ("4.- Informar los resultados\n");
-  printf ("5.- Salir\n");
+    printf ("\nIntroduce una opcion:\n");
+    printf ("1.- Ingresar primer operador\n");
+    printf ("2.- Ingresar segundo operador\n");
+    printf ("3.- Calcular las operaciones\n");
+    printf ("4.- Informar los resultados\n");
+    printf ("5.- Salir\n");
 
-  do {
+    do
+    {
         printf ("\nSu opcion: ");
         scanf("%d",&calculadora);
         switch(calculadora)
         {
 
-            case 1:
-                printf("\nIntroduce el primer numero: ");
-                scanf("%f", &a);
-                break;
+        case 1:
+            printf("\nIntroduce el primer numero: ");
+            scanf("%f", &a);
+            break;
 
-            case 2:
-                printf("\nIntroduce el segundo numero: ");
-                scanf("%f", &b);
-                break;
+        case 2:
+            printf("\nIntroduce el segundo numero: ");
+            scanf("%f", &b);
+            break;
 
-            case 3:
-                a, b, sumar(a, b);
-                a, b, restar(a, b);
-                a, b, multiplicar(a, b);
-                a, b, dividir(a, b);
-                a, b, factorialA(a);
-                a, b, factorialB(b);
-                flag = flag + 1;
-                break;
+        case 3:
+            a, b, sumar(a, b);
+            a, b, restar(a, b);
+            a, b, multiplicar(a, b);
+            a, b, dividir(a, b);
+            a, b, factorialA(a);
+            a, b, factorialB(b);
+            flag = flag + 1;
+            break;
 
-            case 4:
-                 if (flag == 1)
-                 {
-                    printf("La suma es: %.1f\n\n", sumar(a, b));
-                    printf("La resta es: %.1f\n\n", restar(a, b));
-                    printf("La multiplicacion es: %.1f\n\n", multiplicar(a, b));
-                    printf("El factorial de A es: %d\n\n", factorialA(a));
-                    printf("El factorial de B es: %d\n\n", factorialB(b));
+        case 4:
+            printf("a)La suma es: %.1f\n\n", sumar(a, b));
+            printf("b)La resta es: %.1f\n\n", restar(a, b));
+            if (flag == 1 && b != 0)
+            {
+                printf("c)La division es: %.2f\n\n", dividir (a, b));
+            }
+            else
+            {
+                if (flag == 1 && b == 0)
+                {
+                    printf("c)ERROR, No se puede dividir por 0");
+                }
+            }
+            printf("d)La multiplicacion es: %.1f\n\n", multiplicar(a, b));
+            printf("e)El factorial de A es: %d y el factorial de B es %d\n\n", factorialA(a),factorialB(b));
 
-                 }
+            if (flag == 0)
+            {
+                printf("ERROR, NO SE CALCULARON LAS OPERACIONES, PRESIONE 3 PARA CALCULAR.");
+            }
+            break;
 
-                 if (flag == 1 && b != 0)
-                 {
-                      printf("La division es: %.2f\n\n", dividir (a, b));
-                 }
-                 else
-                 {
-                     if (flag == 1 && b == 0)
-                    {
-                        printf("ERROR, No se puede dividir por 0");
-                    }
-                 }
+        case 5:
+            break;
 
-
-                 if (flag == 0)
-                 {
-                     printf("ERROR, NO SE CALCULARON LAS OPERACIONES, PRESIONE 3 PARA CALCULAR.");
-                 }
-                 break;
-
-            case 5:
-                 break;
-
-            default:
-                printf("\nPor favor Introduce una opcion valida...");
+        default:
+            printf("\nPor favor Introduce una opcion valida...");
         }
-  } while (calculadora != 5);
+    }
+    while (calculadora != 5);
 
-  return 0;
+    return 0;
 }
 
 
