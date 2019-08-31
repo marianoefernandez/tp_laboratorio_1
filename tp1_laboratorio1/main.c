@@ -7,8 +7,7 @@ void main (void)
     int calculadora;
 
     int flag = 0;
-    float a, b;
-    char c;
+    float a,b;
 
     printf ("\nIntroduce una opcion:\n");
     printf ("1.- Ingresar primer operador\n");
@@ -35,31 +34,32 @@ void main (void)
             break;
 
         case 3:
+            flag =0;
+            printf("\nSE CALCULARON LAS OPERACIONES EXITOSAMENTE\n");
             a, b, sumar(a, b);
             a, b, restar(a, b);
             a, b, multiplicar(a, b);
             a, b, dividir(a, b);
-            a, b, factorialA(a);
-            a, b, factorialB(b);
+            a, factorial(a);
+            b, factorial(b);
             flag = flag + 1;
             break;
 
         case 4:
             printf("a)La suma es: %.1f\n\n", sumar(a, b));
             printf("b)La resta es: %.1f\n\n", restar(a, b));
-            if (flag == 1 && b != 0)
+            if (a == 0 || b == 0)
             {
-                printf("c)La division es: %.2f\n\n", dividir (a, b));
+                printf("c)ERROR, No se puede dividir por 0\n\n");
             }
             else
             {
-                if (flag == 1 && b == 0)
                 {
-                    printf("c)ERROR, No se puede dividir por 0");
+                    printf("c)La division es: %.2f\n\n", dividir (a, b));
                 }
             }
             printf("d)La multiplicacion es: %.1f\n\n", multiplicar(a, b));
-            printf("e)El factorial de A es: %d y el factorial de B es %d\n\n", factorialA(a),factorialB(b));
+            printf("e)El factorial de A es: !%d y el factorial de B es: !%d\n\n", factorial(a),factorial(b));
 
             if (flag == 0)
             {

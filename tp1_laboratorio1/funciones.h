@@ -1,7 +1,40 @@
-float sumar(float x, float y); // Función usada para sumar dos números ,  se declaran flotantes por si el usuario desea sumar con numeros con coma, se ingresan los datos de las variables a y b y devuelve su suma a+b.
-float restar(float x, float y); // Función para restar dos números , se declaran flotantes por si el usuario desea restar con numeros con coma, se ingresan los datos de las variables a y b y devuelve su resta a-b.
-float dividir(float x, float y); // Función para dividir dos números , se declaran flotantes por si el resultado da numero con coma, se ingresan los datos de las variables a y b y devuelve su division a/b, en caso de division por 0 registra un mensaje de error.
-float multiplicar(float x, float y); // Función para multiplicar dos números , se declaran flotantes por si el usuario desea multiplicar con numeros con coma, se ingresan los datos de las variables a y b y devuelve su multiplicación a*b.
-int factorialA(int x); // Función para sacar el factorial de A , es entero porque el factorial es sólo para enteros , se ingresa un número A y devuelve el factorial !A , Factorial 0 da 1 porque conjunto vacio representa 1.
-int factorialB(int y); // Función para sacar el factorial de B , es entero porque el factorial es sólo para enteros , se ingresa un número B y devuelve el factorial !B , Factorial 0 da 1 porque conjunto vacio representa 1.
+float sumar(float x, float y);
+/** \brief Función para sumar dos float, se los declara flotantes por si se ingresa numero con coma.
+ *
+ * \param Pide un float (x) y lo suma con el (x)
+ * \param Pide un float (y) que le suma el (x)
+ * \return retorna el resultado de la suma
+ *
+ */
+float restar(float x, float y);
+/** \brief Función para restar dos float, se los declara flotantes por si se ingresa numerc con coma.
+ *
+ * \param Pide un float (x) y lo resta con el (y)
+ * \param Pide un float (y) que le resta el (x)
+ * \return Restorna el resultado de la resta
+ *
+ */
+float dividir(float x, float y);
+/** \brief Función para dividir dos float, se los declara flotantes porque una division puede dar con coma.
+ *
+ * \param Pide float (x) y lo divide con el (y)
+ * \param Divide el valor de (y) con (x)
+ * \return Retorna el resultado de la división
+ *
+ */
+float multiplicar(float x, float y);
+/** \brief  Función para dividir dos float, se los declara flotantes porque una multiplicación puede dar con coma.
+ *
+ * \param Pide float (x) y lo divide con el (y)
+ * \param Multiplica el valor de (y) con (x)
+ * \return Retorna el resultado de la multiplicación
+ *
+ */
+int factorial(int x);
+/** \brief Función para sacar factorial de un número, se pide un entero.
+ *
+ * \param Pide entero y lo guarda en una variable, se declara un indice y con un for que se va multiplicando mutuamente realiza el factorial si, es 0 el factorial es 1 por eso int=1
+ * \return Devuelve el factorial de un numero lo que esta en la variable x
+ *
+ */
 
