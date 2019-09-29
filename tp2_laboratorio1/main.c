@@ -172,7 +172,7 @@ int main()
                 }
                 else
                 {
-                    printf("\nPor favor primero realice una carga\n");
+                    printf("\nNo hay ningun empleado dado de alta, por favor primero realice una carga\n");
                 }
                 break;
             default:
