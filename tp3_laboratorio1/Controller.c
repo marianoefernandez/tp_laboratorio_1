@@ -115,7 +115,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
     Employee* empleado;
 
-    int ret = -1;
+    int ret = 0;
     int idAux;
     int idConseguido;
     int opcionAux;
@@ -266,7 +266,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 
             if(idConseguido == idAux)
             {
-                printf("\n\n Desea dar de baja el usuario? s/n");
+                printf("\n\n Desea dar de baja el usuario? s/n:");
                 fflush(stdin);
                 continuar=getche();
 
